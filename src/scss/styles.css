@@ -1,0 +1,132 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p,
+h2,
+h3 {
+  margin: 0;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.head .mode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.main {
+  padding: 1rem;
+}
+@media (min-width: 375px) {
+  .main {
+    padding: 3rem 5rem;
+  }
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.search .search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 40px;
+  width: clamp(300px, 100%, 500px);
+  border-radius: 0.2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.search .search-bar button {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  padding: 0 1rem;
+}
+.search .search-bar hr {
+  border: 1px solid black;
+  height: 1rem;
+}
+.search .search-bar input {
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+.search select {
+  height: 40px;
+  padding: 0 1rem;
+  border: none;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  background-color: #fff;
+}
+
+.cards {
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 100%;
+  margin-top: 3rem;
+}
+.cards .card {
+  width: 300px;
+  height: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+  border-radius: 0.2rem;
+  overflow: hidden;
+}
+.cards .card .img-container {
+  width: 100%;
+  height: 200px;
+  background-color: black;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cards .card .img-container img {
+  width: 100%;
+  height: 100%;
+}
+.cards .card .context {
+  padding: 2rem 1.5rem;
+}
+.cards .card .context h2 {
+  margin-bottom: 1rem;
+}
+.cards .card .context p {
+  margin-bottom: 0.5rem;
+}
+.cards .card .context p:last-of-type {
+  margin-bottom: 0;
+}/*# sourceMappingURL=styles.css.map */
