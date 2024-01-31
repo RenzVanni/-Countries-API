@@ -14,44 +14,65 @@ const Country = () => {
     navigate("/");
   };
   return (
-    <div>
-      <button onClick={handleReturn}>Back</button>
+    <div className="country">
+      <button onClick={handleReturn}>
+        <img src="icons/arrow-icon.svg" alt="arrow-icon" /> Back
+      </button>
 
-      <div className="flag-container">
-        <img src={place.flags.png} alt={`${place.name} flag`} />
-      </div>
+      <div className="main-country">
+        <div className="flag-container">
+          <img src={place.flags.png} alt={`${place.name} flag`} />
+        </div>
 
-      <div className="context">
-        <div className="section-1">
+        <div className="context">
           <h2>{place.name}</h2>
-          <p>Native Name: {place.nativeName}</p>
-          <p>Population: {place.population}</p>
-          <p>Region: {place.region}</p>
-          <p>Sub Region: {place.subregion}</p>
-          <p>Capital: {place.capital}</p>
-        </div>
+          <div className="section-1">
+            <div className="sub-section-1">
+              <p>
+                Native Name: <span>{place.nativeName}</span>
+              </p>
+              <p>
+                Population: <span>{place.population}</span>
+              </p>
+              <p>
+                Region: <span>{place.region}</span>
+              </p>
+              <p>
+                Sub Region: <span>{place.subregion}</span>
+              </p>
+              <p>
+                Capital: <span>{place.capital}</span>
+              </p>
+            </div>
 
-        <div className="section-2">
-          <p>Top Level Domain: {place.topLevelDomain}</p>
-          <p>
-            Currencies: {place.currencies?.map((currencies) => currencies.code)}
-          </p>
-          <p>
-            Languages:{" "}
-            {place.languages?.map((lang, index) => {
-              return <span key={index}>{lang.name} </span>;
-            })}
-          </p>
-        </div>
+            <div className="sub-section-2">
+              <p>
+                Top Level Domain: <span>{place.topLevelDomain}</span>
+              </p>
+              <p>
+                Currencies:{" "}
+                {place.currencies?.map((currencies, index) => {
+                  return <span key={index}>{currencies.code}</span>;
+                })}
+              </p>
+              <p>
+                Languages:{" "}
+                {place.languages?.map((lang, index) => {
+                  return <span key={index}>{lang.name} </span>;
+                })}
+              </p>
+            </div>
+          </div>
 
-        <div className="section-3">
-          <h2>Border Countries</h2>
-          <div className="sub-country">
-            <button>
-              {place.languages?.map((borderCountries, index) => {
-                return <span key={index}>{borderCountries.nativeName}</span>;
-              })}
-            </button>
+          <div className="section-2">
+            <h2>Border Countries</h2>
+            <div className="sub-country">
+              <button>
+                {place.languages?.map((borderCountries, index) => {
+                  return <span key={index}>{borderCountries.nativeName}</span>;
+                })}
+              </button>
+            </div>
           </div>
         </div>
       </div>

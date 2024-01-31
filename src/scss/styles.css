@@ -20,6 +20,15 @@ h3 {
   margin: 0;
 }
 
+:root {
+  --neutral-c1: hsl(209, 23%, 22%);
+  --neutral-c2: hsl(207, 26%, 17%);
+  --neutral-c3: hsl(200, 15%, 8%);
+  --neutral-c4: hsl(0, 0%, 52%);
+  --neutral-c5: hsl(0, 0%, 98%);
+  --neutral-c6: hsl(0, 0%, 100%);
+}
+
 .head {
   display: flex;
   align-items: center;
@@ -129,4 +138,91 @@ h3 {
 }
 .cards .card .context p:last-of-type {
   margin-bottom: 0;
+}
+
+.country {
+  padding: 2rem;
+  min-width: 300px;
+}
+.country button {
+  margin-bottom: 3rem;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 0.4rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+.country .flag-container {
+  margin-bottom: 2rem;
+}
+.country .context p span {
+  color: rgba(0, 0, 0, 0.5);
+}
+.country .context h2 {
+  margin-bottom: 1rem;
+}
+.country .context .section-1 {
+  margin-bottom: 1.5rem;
+}
+.country .context .section-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.country .context .section-2 h2 {
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 375px) {
+  .country {
+    padding: 4rem;
+  }
+  .country button {
+    margin-bottom: 4rem;
+  }
+  .country .main-country {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 400px;
+  }
+  .country .main-country .flag-container {
+    flex-grow: 0.4;
+    height: 100%;
+    max-width: 600px;
+    margin-bottom: 0;
+  }
+  .country .main-country .flag-container img {
+    width: 100%;
+    height: 100%;
+  }
+  .country .main-country .context {
+    flex-grow: 1;
+    padding: 2rem 6rem;
+    height: 100%;
+  }
+  .country .main-country .context h2 {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .country .main-country .context .section-1 {
+    margin-bottom: 5rem;
+  }
+  .country .main-country .context .section-1 p {
+    line-height: 180%;
+  }
+  .country .main-country .context .section-2 {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+  }
+  .country .main-country .context .section-2 h2,
+  .country .main-country .context .section-2 button {
+    width: auto;
+    margin-bottom: 0;
+  }
 }/*# sourceMappingURL=styles.css.map */
