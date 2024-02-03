@@ -1,6 +1,8 @@
-.country {
+.country,
+.dark-country {
   padding: 2rem;
   min-width: 300px;
+  height: 90vh;
 
   button {
     margin-bottom: 3rem;
@@ -97,4 +99,8 @@
       }
     }
   }
+}
+
+.dark-country {
+  background-color: var(--neutral-c1);
 }

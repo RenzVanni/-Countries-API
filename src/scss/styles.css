@@ -29,27 +29,41 @@ h3 {
   --neutral-c6: hsl(0, 0%, 100%);
 }
 
-.head {
+.head,
+.dark-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 10vh;
 }
-.head .mode {
+.head .mode,
+.dark-head .mode {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  cursor: pointer;
 }
 
-.main {
+.dark-head {
+  background-color: var(--neutral-c1);
+}
+
+.main,
+.dark-main {
   padding: 1rem;
 }
 @media (min-width: 375px) {
-  .main {
+  .main,
+  .dark-main {
     padding: 3rem 5rem;
   }
+}
+
+.dark-main {
+  background-color: var(--neutral-c1);
 }
 
 .search {
@@ -140,11 +154,14 @@ h3 {
   margin-bottom: 0;
 }
 
-.country {
+.country,
+.dark-country {
   padding: 2rem;
   min-width: 300px;
+  height: 90vh;
 }
-.country button {
+.country button,
+.dark-country button {
   margin-bottom: 3rem;
   border: none;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -154,34 +171,43 @@ h3 {
   justify-content: center;
   gap: 0.3rem;
 }
-.country .flag-container {
+.country .flag-container,
+.dark-country .flag-container {
   margin-bottom: 2rem;
 }
-.country .context p span {
+.country .context p span,
+.dark-country .context p span {
   color: rgba(0, 0, 0, 0.5);
 }
-.country .context h2 {
+.country .context h2,
+.dark-country .context h2 {
   margin-bottom: 1rem;
 }
-.country .context .section-1 {
+.country .context .section-1,
+.dark-country .context .section-1 {
   margin-bottom: 1.5rem;
 }
-.country .context .section-1 {
+.country .context .section-1,
+.dark-country .context .section-1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.country .context .section-2 h2 {
+.country .context .section-2 h2,
+.dark-country .context .section-2 h2 {
   margin-bottom: 0.5rem;
 }
 @media (min-width: 375px) {
-  .country {
+  .country,
+  .dark-country {
     padding: 4rem;
   }
-  .country button {
+  .country button,
+  .dark-country button {
     margin-bottom: 4rem;
   }
-  .country .main-country {
+  .country .main-country,
+  .dark-country .main-country {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -189,40 +215,53 @@ h3 {
     width: 100%;
     height: 400px;
   }
-  .country .main-country .flag-container {
+  .country .main-country .flag-container,
+  .dark-country .main-country .flag-container {
     flex-grow: 0.4;
     height: 100%;
     max-width: 600px;
     margin-bottom: 0;
   }
-  .country .main-country .flag-container img {
+  .country .main-country .flag-container img,
+  .dark-country .main-country .flag-container img {
     width: 100%;
     height: 100%;
   }
-  .country .main-country .context {
+  .country .main-country .context,
+  .dark-country .main-country .context {
     flex-grow: 1;
     padding: 2rem 6rem;
     height: 100%;
   }
-  .country .main-country .context h2 {
+  .country .main-country .context h2,
+  .dark-country .main-country .context h2 {
     width: 100%;
     margin-bottom: 2rem;
   }
-  .country .main-country .context .section-1 {
+  .country .main-country .context .section-1,
+  .dark-country .main-country .context .section-1 {
     margin-bottom: 5rem;
   }
-  .country .main-country .context .section-1 p {
+  .country .main-country .context .section-1 p,
+  .dark-country .main-country .context .section-1 p {
     line-height: 180%;
   }
-  .country .main-country .context .section-2 {
+  .country .main-country .context .section-2,
+  .dark-country .main-country .context .section-2 {
     display: flex;
     align-items: center;
     justify-content: start;
     gap: 1rem;
   }
   .country .main-country .context .section-2 h2,
-  .country .main-country .context .section-2 button {
+  .country .main-country .context .section-2 button,
+  .dark-country .main-country .context .section-2 h2,
+  .dark-country .main-country .context .section-2 button {
     width: auto;
     margin-bottom: 0;
   }
+}
+
+.dark-country {
+  background-color: var(--neutral-c1);
 }/*# sourceMappingURL=styles.css.map */

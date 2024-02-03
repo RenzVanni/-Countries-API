@@ -1,7 +1,11 @@
 import { useParams, useNavigate } from "react-router-dom";
 import data from "../data.json";
+import { useContext } from "react";
+import { ThemeContext } from "../context/theme";
 
 const Country = () => {
+  const thisIsTheme = useContext(ThemeContext);
+  console.log(thisIsTheme);
   const { country } = useParams();
   const navigate = useNavigate();
   const place = data.find((place) => place.name == country);
@@ -14,7 +18,7 @@ const Country = () => {
     navigate("/");
   };
   return (
-    <div className="country">
+    <div className={thisIsTheme?.theme ? "dark-country" : "country"}>
       <button onClick={handleReturn}>
         <img src="icons/arrow-icon.svg" alt="arrow-icon" /> Back
       </button>

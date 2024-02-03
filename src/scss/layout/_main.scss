@@ -1,7 +1,12 @@
-.main {
+.main,
+.dark-main {
   padding: 1rem;
 
   @media (min-width: 375px) {
     padding: 3rem 5rem;
   }
+}
+
+.dark-main {
+  background-color: var(--neutral-c1);
 }

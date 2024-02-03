@@ -1,14 +1,21 @@
-.head {
+.head,
+.dark-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 10vh;
 
   .mode {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    cursor: pointer;
   }
+}
+
+.dark-head {
+  background-color: var(--neutral-c1);
 }

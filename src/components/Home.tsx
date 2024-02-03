@@ -1,8 +1,10 @@
-import { useState, ChangeEvent } from "react";
+import { useState, ChangeEvent, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import data from "../data.json";
+import { ThemeContext } from "../context/theme";
 
 const Home = () => {
+  const theme = useContext(ThemeContext);
   const navigate = useNavigate();
   const [info, setInfo] = useState(data);
   const uniqueRegion = [...new Set(data.map((region) => region.region))];
@@ -33,7 +35,7 @@ const Home = () => {
     );
   };
   return (
-    <div className="main">
+    <div className={theme?.theme ? "dark-main" : "main"}>
       <div className="search">
         <div className="search-bar">
           <button>
