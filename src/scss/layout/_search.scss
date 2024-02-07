@@ -1,4 +1,5 @@
-.search {
+.search,
+.dark-search {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,6 +14,7 @@
     width: clamp(300px, 100%, 500px);
     border-radius: 0.2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--neutral-c6);
     overflow: hidden;
 
     button {
@@ -26,6 +28,8 @@
       height: 1rem;
     }
     input {
+      color: var(--neutral-c4);
+      background-color: transparent;
       outline: none;
       border: none;
       width: 100%;
@@ -40,6 +44,7 @@
     border-radius: 0.2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 150px;
-    background-color: #fff;
+    background-color: var(--neutral-c6);
+    color: var(--neutral-c3);
   }
 }

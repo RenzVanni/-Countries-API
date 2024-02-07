@@ -5,7 +5,6 @@ import { ThemeContext } from "../context/theme";
 
 const Country = () => {
   const thisIsTheme = useContext(ThemeContext);
-  console.log(thisIsTheme);
   const { country } = useParams();
   const navigate = useNavigate();
   const place = data.find((place) => place.name == country);
@@ -14,7 +13,7 @@ const Country = () => {
     return <div>Country Not Found!</div>;
   }
 
-  const handleReturn = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  const handleReturn = () => {
     navigate("/");
   };
   return (

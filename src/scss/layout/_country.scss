@@ -2,7 +2,7 @@
 .dark-country {
   padding: 2rem;
   min-width: 300px;
-  height: 90vh;
+  min-height: 90vh;
 
   button {
     margin-bottom: 3rem;
@@ -22,7 +22,7 @@
   .context {
     p {
       span {
-        color: rgba(0, 0, 0, 0.5);
+        color: var(--neutral-c4);
       }
     }
 
@@ -34,12 +34,13 @@
     }
     .section-1 {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      flex-direction: column;
+      gap: 2rem;
     }
 
     .section-2 {
       h2 {
+        font-size: 1rem;
         margin-bottom: 0.5rem;
       }
     }
@@ -47,6 +48,7 @@
 
   @media (min-width: 375px) {
     padding: 4rem;
+    height: auto;
     button {
       margin-bottom: 4rem;
     }
@@ -79,6 +81,11 @@
         }
 
         .section-1 {
+          display: flex;
+          flex-direction: row;
+          gap: 0;
+          align-items: center;
+          justify-content: space-between;
           margin-bottom: 5rem;
           p {
             line-height: 180%;
@@ -99,8 +106,4 @@
       }
     }
   }
-}
-
-.dark-country {
-  background-color: var(--neutral-c1);
 }

@@ -2,24 +2,32 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Country from "./components/Country";
 import { ThemeContext } from "./context/theme";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 const App = () => {
-  const [theme, setTheme] = useState(false);
   const thisTheme = useContext(ThemeContext);
+  const [theme, setTheme] = useState(false);
 
   useEffect(() => {
-    console.log("new", thisTheme);
+    // ThemeContext;
+    console.log(thisTheme);
   }, [theme]);
-  console.log(thisTheme);
+
   const handleTheme = () => {
     setTheme((prev) => !prev);
+    console.log(thisTheme);
   };
+
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={thisTheme?.theme ? "dark-head" : "head"}>
         <h3>Where in the world?</h3>
         <div className="mode" onClick={handleTheme}>
-          <img src="icons/moon-icon.svg" alt="" />
+          <img
+            src={
+              thisTheme?.theme ? "icons/sun-icon.svg" : "icons/moon-icon.svg"
+            }
+            alt=""
+          />
           <span>Dark Mode</span>
         </div>
       </div>

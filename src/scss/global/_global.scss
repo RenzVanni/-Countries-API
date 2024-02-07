@@ -19,3 +19,56 @@ h2,
 h3 {
   margin: 0;
 }
+
+.country,
+.main {
+  background-color: var(--neutral-c5);
+}
+
+.country {
+  button {
+    background-color: var(--neutral-c6);
+  }
+}
+
+.dark-main,
+.dark-country,
+.dark-head {
+  background-color: var(--neutral-c2);
+}
+
+.dark-search {
+  .search-bar {
+    background-color: var(--neutral-c1) !important;
+    input {
+      color: var(--neutral-c6) !important;
+    }
+  }
+
+  select {
+    background-color: var(--neutral-c1) !important;
+    color: var(--neutral-c6) !important;
+  }
+}
+
+.dark-card {
+  background-color: var(--neutral-c1);
+  color: var(--neutral-c6);
+
+  .context {
+    span {
+      color: var(--neutral-c4);
+    }
+  }
+}
+
+.dark-country {
+  button {
+    background-color: var(--neutral-c1);
+    color: var(--neutral-c6);
+  }
+
+  .context {
+    color: var(--neutral-c6);
+  }
+}

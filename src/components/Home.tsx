@@ -36,7 +36,7 @@ const Home = () => {
   };
   return (
     <div className={theme?.theme ? "dark-main" : "main"}>
-      <div className="search">
+      <div className={theme?.theme ? "dark-search" : "search"}>
         <div className="search-bar">
           <button>
             <img src="icons/search-icon.svg" alt="" />
@@ -66,7 +66,7 @@ const Home = () => {
         {info.map((data, index) => {
           return (
             <div
-              className="card"
+              className={theme?.theme ? "dark-card" : "card"}
               key={index}
               onClick={() => {
                 handleNavigate(data.name);
@@ -78,9 +78,15 @@ const Home = () => {
 
               <div className="context">
                 <h2>{data.name}</h2>
-                <p>Population: {data.population}</p>
-                <p>Region: {data.region}</p>
-                <p>Capital: {data.capital}</p>
+                <p>
+                  Population: <span>{data.population}</span>
+                </p>
+                <p>
+                  Region: <span>{data.region}</span>
+                </p>
+                <p>
+                  Capital: <span>{data.capital}</span>
+                </p>
               </div>
             </div>
           );
