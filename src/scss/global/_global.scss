@@ -37,6 +37,13 @@ h3 {
   background-color: var(--neutral-c2);
 }
 
+.dark-head {
+  h3,
+  span {
+    color: var(--neutral-c6);
+  }
+}
+
 .dark-search {
   .search-bar {
     background-color: var(--neutral-c1) !important;

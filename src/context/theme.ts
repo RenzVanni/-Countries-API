@@ -6,13 +6,3 @@ type Props = {
 };
 
 export const ThemeContext = createContext<Props | undefined>(undefined);
-
-// export function themeData() {
-//   const thisThemeData = useContext(ThemeContext);
-
-//   if (thisThemeData === undefined) {
-//     throw new Error("Theme is undefined");
-//   }
-
-//   return thisThemeData;
-// }

@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import data from "../data.json";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ThemeContext } from "../context/theme";
 
 const Country = () => {
@@ -13,6 +13,9 @@ const Country = () => {
     return <div>Country Not Found!</div>;
   }
 
+  useEffect(() => {
+    console.log("Country ", thisIsTheme);
+  }, [thisIsTheme]);
   const handleReturn = () => {
     navigate("/");
   };
@@ -70,11 +73,13 @@ const Country = () => {
           <div className="section-2">
             <h2>Border Countries</h2>
             <div className="sub-country">
-              <button>
-                {place.languages?.map((borderCountries, index) => {
-                  return <span key={index}>{borderCountries.nativeName}</span>;
-                })}
-              </button>
+              {place.languages?.map((borderCountries, index) => {
+                return (
+                  <button key={index}>
+                    <span>{borderCountries.nativeName}</span>
+                  </button>
+                );
+              })}
             </div>
           </div>
         </div>

@@ -43,6 +43,12 @@
         font-size: 1rem;
         margin-bottom: 0.5rem;
       }
+      .sub-country {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 1rem;
+      }
     }
   }
 

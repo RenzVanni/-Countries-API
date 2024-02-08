@@ -35,6 +35,11 @@ h3 {
   background-color: var(--neutral-c2);
 }
 
+.dark-head h3,
+.dark-head span {
+  color: var(--neutral-c6);
+}
+
 .dark-search .search-bar {
   background-color: var(--neutral-c1) !important;
 }
@@ -249,6 +254,13 @@ h3 {
 .dark-country .context .section-2 h2 {
   font-size: 1rem;
   margin-bottom: 0.5rem;
+}
+.country .context .section-2 .sub-country,
+.dark-country .context .section-2 .sub-country {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
 }
 @media (min-width: 375px) {
   .country,
